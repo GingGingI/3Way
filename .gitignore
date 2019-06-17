@@ -11,3 +11,5 @@
 /build
 /captures
 .externalNativeBuild
+libs/
+src/main/java/c/gingdev/a3way/prefNames.kt

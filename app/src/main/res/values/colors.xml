@@ -3,4 +3,30 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="Subway_1">#0052A4</color>
+    <color name="Subway_2">#009D3E</color>
+    <color name="Subway_3">#EF7C1C</color>
+    <color name="Subway_4">#00A5DE</color>
+    <color name="Subway_5">#996CAC</color>
+    <color name="Subway_6">#CD7C2F</color>
+    <color name="Subway_7">#747F00</color>
+    <color name="Subway_8">#EA545D</color>
+    <color name="Subway_9">#A17E46</color>
+    <color name="Subway_Bundang">#F5A200</color>
+    <color name="Subway_Incheon">#7CA8D5</color>
+    <color name="Subway_SinBundang">#D4003B</color>
+    <color name="Subway_GyeonguiJoungang">#77C4A3</color>
+    <color name="Subway_Kyeongchun">#0C8E72</color>
+    <color name="Subway_Airport">#0090D2</color>
+    <color name="Subway_Uijeongbu">#FDA600</color>
+    <color name="Subway_Suin">#F5A200</color>
+    <color name="Subway_Everline">#6FB245</color>
+    <color name="Subway_WooeSinseul">#B7C452</color>
+    
+    <color name="Bus_Gansun">#0068B7</color>
+    <color name="Bus_Jisun">#53B332</color>
+    <color name="Bus_Maul">#53B332</color>
+    <color name="Bus_Sunhwan">#f2b70a</color>
+    <color name="Bus_GuangYuk">#e60012</color>
 </resources>
