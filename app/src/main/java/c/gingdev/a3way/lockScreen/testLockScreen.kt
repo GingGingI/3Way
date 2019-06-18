@@ -17,13 +17,11 @@ class testLockScreen: AppCompatActivity() {
         flagInit()
         setContentView(R.layout.activity_lock_screen)
     }
-
     override fun onResume() {
         super.onResume()
         Log.e("lifeCycle", "resume")
 //        ThreadStart
     }
-
     override fun onPause() {
         super.onPause()
         Log.e("lifeCycle", "pause")
