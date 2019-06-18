@@ -17,7 +17,8 @@ import c.gingdev.a3way.broadcast.lockBroadcastReceiver
 
 class lockScreenService: Service() {
 
-    private val lockReceiver: BroadcastReceiver by lazy(LazyThreadSafetyMode.NONE) { lockBroadcastReceiver() }
+    private val lockReceiver: BroadcastReceiver
+            by lazy(LazyThreadSafetyMode.SYNCHRONIZED) { lockBroadcastReceiver() }
 
     override fun onCreate() {
         super.onCreate()
@@ -26,7 +27,7 @@ class lockScreenService: Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) startForeground()
-        else startForeground(1, Notification())
+        else startForeground(0, Notification())
 
         intent notNull { initFilter() }
         return START_STICKY
@@ -54,7 +55,7 @@ class lockScreenService: Service() {
         val channel = NotificationChannel(
             Channel_ID,
             Channel_NAME,
-            NotificationManager.IMPORTANCE_NONE)
+            NotificationManager.IMPORTANCE_MIN)
             .apply {
                 lightColor = R.color.colorPrimary
                 lockscreenVisibility = Notification.VISIBILITY_PRIVATE
@@ -67,11 +68,10 @@ class lockScreenService: Service() {
         val notification = notificationBuilder.setOngoing(true)
             .setSmallIcon(R.drawable.ic_launcher_foreground)
             .setContentTitle("App is Running")
-            .setPriority(NotificationManager.IMPORTANCE_NONE)
+            .setPriority(NotificationManager.IMPORTANCE_MIN)
             .setCategory(Notification.CATEGORY_SERVICE)
             .build()
-        notification.flags = Notification.FLAG_NO_CLEAR
-        startForeground(2, notification)
+        startForeground(0, notification)
     }
 
     override fun onBind(intent: Intent?): IBinder? = null

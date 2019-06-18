@@ -49,6 +49,10 @@ class testLockScreen: AppCompatActivity() {
         }
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
+    }
 
     private fun Any?.notNull(f: () -> Unit) {
         if (this != null) f()
