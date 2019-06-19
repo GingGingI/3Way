@@ -15,12 +15,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         startService()
-
         pref.edit().apply { putBoolean(lockScreenMode, true) }.apply()
-    }
 
+    }
     private fun startService() {
         val i = Intent(applicationContext, lockScreenService::class.java)
         startService(i)
     }
+
 }
