@@ -1,17 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:background="#2f2f2f">
+
+        android:padding="8dp"
+        android:background="@color/colorWhite">
+
+    <TextView
+            android:id="@+id/Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+
+            android:text="00:00"
+            android:textSize="42sp"
+            android:textColor="@color/colorBlack"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/timelinePager"/>
 
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="String"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="#eee"/>
+            android:text="현재 시간"
+            android:textSize="12sp"
 
-</LinearLayout>
+            app:layout_constraintTop_toTopOf="@id/Time"
+            app:layout_constraintEnd_toEndOf="@id/Time"/>
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/timelinePager"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+
+            app:layout_constraintTop_toBottomOf="@id/Time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+    </androidx.viewpager.widget.ViewPager>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

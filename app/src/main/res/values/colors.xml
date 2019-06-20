@@ -29,4 +29,12 @@
     <color name="Bus_Maul">#53B332</color>
     <color name="Bus_Sunhwan">#f2b70a</color>
     <color name="Bus_GuangYuk">#e60012</color>
+
+    <color name="none">#00000000</color>
+    
+    <color name="colorRealBlack">#FF000000</color>
+    <color name="colorBlack">#FF4f4f4f</color>
+    <color name="colorGray">#FF888888</color>
+    <color name="colorWhite">#FFEEEEEE</color>
+    <color name="colorRealWhite">#FFFFFFFF</color>
 </resources>

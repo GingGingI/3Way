@@ -1,8 +1,7 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 28
@@ -24,10 +23,34 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+//    Core
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.core:core-ktx:1.0.2'
+
+//    lifeCycle
+    implementation "com.trello.rxlifecycle2:rxlifecycle:$RxlifeCycle"
+    implementation "com.trello.rxlifecycle2:rxlifecycle-android:$RxlifeCycle"
+    implementation "com.trello.rxlifecycle2:rxlifecycle-components:$RxlifeCycle"
+
+//    Rx
+    implementation "io.reactivex.rxjava2:rxandroid:$RxAndroid"
+    implementation "io.reactivex.rxjava2:rxjava:$RxJava"
+
+//    디자인
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation "com.google.android.material:material:$design"
+
+//    Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp"
+
+//    Kapt
+    kapt "com.android.databinding:compiler:$compiler_version"
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
